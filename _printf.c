@@ -17,8 +17,7 @@ int _printf(const char *format, ...)
 		char *temp_str;
 
 		va_start (argu, format);
-
-		buf = malloc(1024 * sizeof(char));
+		buf = _calloc(2048, sizeof(char));
 		if (buf == NULL)
 		{
 			return (-1);
