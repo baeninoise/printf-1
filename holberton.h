@@ -19,7 +19,7 @@ typedef struct prin
 	char flag;
 	char *(*fn)(va_list argu);
 } sir;
-
+void *_calloc(unsigned int nmemb, unsigned int size);
 int _strncat(char *buff, const char *format, int n);
 char *fntn(const char symbl, va_list);
 void *_strcat(char *dest, char *src);
