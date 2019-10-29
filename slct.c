@@ -23,7 +23,7 @@ char *fntn(const char symbl, va_list argu)
 	int i;
 
 	i = 0;
-	while (slct[i].flag != symbl && i < 6)
+	while (slct[i].flag != symbl && i < 7)
 	{
 		i++;
 	}

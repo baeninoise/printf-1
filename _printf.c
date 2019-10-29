@@ -8,39 +8,43 @@
 
 int _printf(const char *format, ...)
 {
-	va_list argu;
-	int i;
-
-	va_start(argu, format);
-
-	char *buf;
-	char *temp_str;
-
-	buf = malloc(1024);
-	if (buf == NULL)
+	if (format != NULL)
 	{
-		return (-1);
-	}
+		va_list argu;
+		int i;
 
-	if (format[0] == 37 && format[1] == 00)
-		return (-1);
+		va_start(argu, format);
 
-	i = 0;
-	while (format && format[i] != 00)
-	{
-		i = _strncat(buf, format, i);
-		if (format[i] == 37)
+		char *buf;
+		char *temp_str;
+
+		buf = malloc(1024);
+		if (buf == NULL)
 		{
-			i++;
-			temp_str = fntn(format[i], argu);
-			_strcat(buf, temp_str);
+			return (-1);
 		}
-		if (format[i] != 00)
-			i++;
+
+		if (format[0] == 37 && format[1] == 00)
+			return (-1);
+
+		i = 0;
+		while (format && format[i] != 00)
+		{
+			i = _strncat(buf, format, i);
+			if (format[i] == 37)
+			{
+				i++;
+				temp_str = fntn(format[i], argu);
+				_strcat(buf, temp_str);
+			}
+			if (format[i] != 00)
+				i++;
+		}
+		i = _strlen(buf);
+		write(1, buf, i);
+		va_end(argu);
+		free(buf);
+		return (i);
 	}
-	i = _strlen(buf);
-	write(1, buf, i);
-	va_end(argu);
-	free(buf);
-	return (i);
+	return (-1);
 }
