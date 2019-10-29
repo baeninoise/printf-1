@@ -15,13 +15,15 @@ char *fntn(const char symbl, va_list argu)
 		{'s', str_str},
 		{'%', str_percent},
 		{'i', str_int},
-		{'d', str_int}
+		{'d', str_int},
+		{'l', str_int},
+		{00, NULL}
 	};
 
 	int i;
 
 	i = 0;
-	while (slct[i].flag != symbl && i < 3)
+	while (slct[i].flag != symbl && i < 6)
 	{
 		i++;
 	}
