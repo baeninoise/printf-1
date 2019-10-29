@@ -38,7 +38,8 @@ To execute: `./name_of_executable`
 ======
 
 The _printf function produces output according to a format:
-|file|description  |
+
+|file|description|
 |--|--|
 |*holberton.h*|Contain the struct and prototypes to the _printf function|
 |*man_3_printf*|Contain the man page of the _printf function with all its specifications|
