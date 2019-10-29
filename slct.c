@@ -10,14 +10,14 @@
  {
      char *tmp_str;
      sir slct[] = {
-		{'c', str_chr}
-		//{'s', str_str},
+		{'c', str_chr},
+		{'s', str_str}
 	};
 
     int i;
-
+    
     i = 0;
-    while (slct[i].flag != symbl && i < 2)
+    while (slct[i].flag != symbl && i < 3)
     {
         i++;
     }

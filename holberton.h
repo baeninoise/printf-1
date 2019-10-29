@@ -22,6 +22,7 @@ int _strncat(char *buff,const char *format, int n);
 char *fntn(const char symbl, va_list);
 void *_strcat(char *dest, char *src);
 char *str_chr(va_list argu);
-
+char *str_str(va_list argu);
+int _strlen(char *s);
 int _printf(const char *format, ...);
 #endif

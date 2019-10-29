@@ -22,9 +22,9 @@ int _printf(const char *format, ...)
 	}
 
 	i = 0;
-	_strncat(buf, format, i);
 	while (format && format[i])
 	{
+		i = _strncat(buf, format, i);
 		if (format[i] == 37)
 		{
 			i++;
@@ -33,7 +33,7 @@ int _printf(const char *format, ...)
 		}
 		i++;
 	}
-
+	i = _strlen(buf);
 	write(1, buf, i);
 	return (i);
 }

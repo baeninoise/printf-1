@@ -5,9 +5,9 @@
  *
  * Return: the string found
  */
-void *str_str(va_list argu)
+char *str_str(va_list argu)
 {
-	char *str = va_arg(list, char *);
+	char *str = va_arg(argu, char*);
 
 	if (str == NULL)
 	{
