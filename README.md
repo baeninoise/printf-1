@@ -34,20 +34,31 @@ To compile a file with the function is necessary to add all the .c files involve
 
 To execute: `./name_of_executable`
 
-**Task**
+**Files Description**
 ======
 
-0. Write a function that produces output according to a format.
-- c
-- s
-- %
+The _printf function produces output according to a format:
+|file|description  |
+|--|--|
+|*holberton.h*|Contain the struct and prototypes to the _printf function|
+|*man_3_printf*|Contain the man page of the _printf function with all its specifications|
+|*_printf.c*|Contain the main function of the _printf
+|*slct.c*|Contain the content for found the specifiers of the _printf function
+|*str_char.c*|Contain the function that found a character to print with _printf function
+|*str_string.c*|Contain the function that found a string to print with _printf function
+|*strcat.c*|Contain the function that concatenates the buffer and the temporal string
+|*strlen.c*|Contain the function that gets the length of the buffer
+|*strncat.c*|Contain the function that concatenates the format with the buffer and update iterator of format
+|*str_percent.c*|Contain the function that print the sign percent of the specifier format to print of _printf function
+|*str_integer.c*|Contain the function that print and found a integer to print with _printf function
 
-1. Handle the following conversion specifiers:
-- d
-- i
+**Contributing**
+====================
+This is a project for  [Holberton School](https://www.holbertonschool.com/)  by Holberton Students.
+Pull requests are welcome, if you found a bug, you can report us at the email: 970@holbertonschool.com or 1263@holbertonschool.com
+Please make sure to update tests as appropriate
 
-2. Create a man page for your function.
------------------------------
+
 **Authors**
 =========
 - [Cristian Murcia](https://github.com/Cris-Mur)
