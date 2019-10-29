@@ -8,7 +8,7 @@
  * Return: dest string
  */
 
-int _strncat(char *buff,const char *format, int n)
+int _strncat(char *buff, const char *format, int n)
 {
 	int i;
 

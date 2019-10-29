@@ -7,7 +7,7 @@
 #include <unistd.h>
 
 /**
- * prin - structure that contain flag and funtion
+ * struct prin - structure that contain flag and funtion
  * @flag: character that identify funtion
  * @fn: pointer to funtion
  */
@@ -16,13 +16,14 @@ typedef struct prin
 {
 	char flag;
 	char *(*fn)(va_list argu);
-}sir;
+} sir;
 
-int _strncat(char *buff,const char *format, int n);
+int _strncat(char *buff, const char *format, int n);
 char *fntn(const char symbl, va_list);
 void *_strcat(char *dest, char *src);
 char *str_chr(va_list argu);
 char *str_str(va_list argu);
 int _strlen(char *s);
 int _printf(const char *format, ...);
+char *str_percent(va_list argu);
 #endif
