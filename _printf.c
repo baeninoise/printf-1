@@ -2,7 +2,7 @@
 
 /**
  * _printf - my printf
- *
+ * @format: input constant
  * Return: size of bufer (success) or -1 if fail
  */
 
@@ -10,6 +10,7 @@ int _printf(const char *format, ...)
 {
 	va_list argu;
 	int i;
+
 	va_start(argu, format);
 
 	char *buf;

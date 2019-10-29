@@ -2,7 +2,7 @@
 
 /**
  * _strcat - concatenates two strings
- * @dest: string of destiny
+ * @buf: string of destiny
  * @src: string of source
  * Return: dest string
  */
