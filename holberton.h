@@ -26,4 +26,5 @@ char *str_str(va_list argu);
 int _strlen(char *s);
 int _printf(const char *format, ...);
 char *str_percent(va_list argu);
+char *str_int(va_list argu);
 #endif

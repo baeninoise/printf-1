@@ -13,7 +13,9 @@ char *fntn(const char symbl, va_list argu)
 	sir slct[] = {
 		{'c', str_chr},
 		{'s', str_str},
-		{'%', str_percent}
+		{'%', str_percent},
+		{'i', str_int},
+		{'d', str_int}
 	};
 
 	int i;

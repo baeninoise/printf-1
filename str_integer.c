@@ -2,7 +2,6 @@
 /**
  * str_int - prints a integer
  * @argu: list of arguments
- *
  * Return: the integer found
  */
 char *str_int(va_list argu)
@@ -11,18 +10,19 @@ char *str_int(va_list argu)
 	int n;
 	char *str;
 
-	count = 0;
+	str = malloc(10 * sizeof(char));
 
 	n = va_arg(argu, int);
 	if (n < 0)
 	{
 		abs = (n * -1);
-		count = count + _putchar('-');
-
+		str[0] = '-';
+		count = 1;
 	}
 	else
 	{
 		abs = n;
+		count = 0;
 	}
 
 	aux = abs;
@@ -32,10 +32,9 @@ char *str_int(va_list argu)
 		aux = aux / 10;
 		numb = numb * 10;
 	}
-	str = malloc(numb);
 	while (numb >= 1)
 	{
-		str[count] = (((abs / numb) % 10) + '0');
+		str[count] = (((abs / numb) % 10) + 48);
 		count++;
 		numb = numb / 10;
 	}
