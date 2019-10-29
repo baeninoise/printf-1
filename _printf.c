@@ -22,6 +22,9 @@ int _printf(const char *format, ...)
 		return (-1);
 	}
 
+	if (format[0] == 37 && format[1] == 00)
+		return (-1);
+
 	i = 0;
 	while (format && format[i])
 	{
