@@ -13,12 +13,12 @@ int _printf(const char *format, ...)
 		va_list argu;
 		int i;
 
-		va_start(argu, format);
-
 		char *buf;
 		char *temp_str;
 
-		buf = malloc(1024);
+		va_start (argu, format);
+
+		buf = malloc(1024 * sizeof(char));
 		if (buf == NULL)
 		{
 			return (-1);
