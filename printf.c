@@ -10,12 +10,30 @@ int _printf(const char *format, ...)
 {
 	va_list argu;
 	int i;
+	va_start(argu, format);
 
-	sir slct[] = {
-		{'s', print_string}
-	};
+	char *buf;
+	char *temp_str;
+
+	buf = malloc(1024);
+	if (buf == NULL)
+	{
+		return (-1);
+	}
 
 	i = 0;
-	va_start(argu, format);
-	while ()
+	_strncat(buf, format, i);
+	while (format && format[i])
+	{
+		if (format[i] == 37)
+		{
+			i++;
+			temp_str = fntn(format[i], argu);
+			_strcat(buf, temp_str);
+		}
+		i++;
+	}
+
+	write(1, buf, i);
+	return (i);
 }
