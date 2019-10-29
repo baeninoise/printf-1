@@ -7,7 +7,7 @@
 char *str_int(va_list argu)
 {
 	unsigned int abs, aux, numb, count;
-	int n;
+	long int n;
 	char *str;
 
 	str = malloc(10 * sizeof(char));
