@@ -11,25 +11,23 @@ int _printf(const char *format, ...)
 	if (format != NULL)
 	{
 		va_list argu;
-		int i;
+		unsigned int i;
 
-		char *buf;
-		char *temp_str;
+		char *buf, *temp_str;
 
-		va_start (argu, format);
+		va_start(argu, format);
 
 		buf = malloc(1024 * sizeof(char));
 		if (buf == NULL)
-		{
-			return (-1);
-		}
-
-		if (format[0] == 37 && format[1] == 00)
 			return (-1);
 
 		i = 0;
 		while (format && format[i] != 00)
 		{
+			if (format[0] == 37 && format[1] == 00)
+			{
+				return (-1);
+			}
 			i = _strncat(buf, format, i);
 			if (format[i] == 37)
 			{
