@@ -11,7 +11,7 @@ char *str_str(va_list argu)
 
 	if (str == NULL)
 	{
-		return (NULL);
+		str = "(null)";
 	}
 	return (str);
 }
